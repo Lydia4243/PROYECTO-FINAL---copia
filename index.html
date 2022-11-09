@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Proyecto Final</title>
+    <script defer src="./js/app.js" type="module"></script>
+    <script defer src="modal.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="text-center">PLANIFICADOR DE GASTOS</h1>
+            
+            
+            
+        </header>
+        <button   id="boton-lista">
+            <img src="./css/img/boton-agregar.png" alt=""width=50px><i class="Listaimg"></i></button>
+            
+            <button id="boton-resetApp">RESET<i class="btn"></i></button>      
+       
+        <section class="contenido-principal">
+            <div class="contenido secundario">
+
+                <div id="presupuesto" class="presupuesto">
+                    <div class="alert alert-primary">
+                        <p>PRESUPUESTO: $ <span id="total"></span> </p>
+                    </div>
+                    <div class="restante alert alert-success">
+                        <p>RESTANTE: $ <span id="restante"></span></p>
+                    </div>
+                    <div  class="Gastado">
+                        <p>PORCENTAJE GASTADO:<span id="porcentajeGastado"></span></p>
+                    </div> 
+                    <br>
+                    <h2 class="text-center"><b>GASTOS REALIZADOS</b></h2>
+                    <div id="gastos">
+                        <ul class="list-group"></ul>
+                    </div>
+                    <div  class="Gastado">
+                        <p>TOTAL GASTADO: <span id="TotalGastado"></span></p>
+                    </div>
+
+                    <h2 class="text-center"><b>CATEGORIA</b></h2>
+                    <br>
+                    <div class="campos">
+                        <label id="categoriagastado">CATEGORIA GASTADO</label>
+                        <select id="selectcategoria">
+                            <option>--Seleccione--</option>
+                            <option>Ahorro</option>
+                            <option>Comida</option>
+                            <option>Salud</option>
+                            <option>Suscripciones</option>
+                            <option>Recibos</option>
+                            <option>Casa</option>
+                            <option>Otro</option>
+                        </select>
+                        
+                    </div> 
+                         
+                            <ul class="list-group" id="ListadoFiltrado"></ul>
+                    </div>
+                </div> 
+                                     
+                </div><!--.presupuesto-->
+
+            </div><!--.contenido-->
+        </section>
+                
+
+        
+    </div>
+    <div class="container">
+    <div class="modal-contenedor">
+        <div class="modal-listaGastos">
+            <div class="contenido primario">
+                <h2 class="text-center  "id="Añade"><b>AÑADE TUS GASTOS AQUI</b></h2>
+                <form id="agregar-gasto" action="#">
+                    <div class="form-group">
+                        <label for="gasto">GASTOS: </label>
+                        <input type="text" class="form-control" id="gasto" placeholder="Nombre Gasto">
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">CANTIDAD: </label>
+                        <input type="text" class="form-control" id="cantidad" placeholder="Cantidad en $">
+                    </div>
+                    <div class="campos">
+                        <label id="categoria">CATEGORIA</label>
+                        <select id="campo">
+                            <option>--Seleccione--</option>
+                            <option>Ahorro</option>
+                            <option>Comida</option>
+                            <option>Salud</option>
+                            <option>Suscripciones</option>
+                            <option>Recibos</option>
+                            <option>Casa</option>
+                            <option>Otro</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+            <button id="listaGastosCerrar">Cerrar<i class="btn-cerar"></i></button>
+                </form>
+            </div>
+            <div id="modal-contenedor"></div>
+            <div id="listaGastos-contenedor"> </div>
+        </div>
+    </div>
+</div>
+    
+
+    
+</body>
+
+</html>
